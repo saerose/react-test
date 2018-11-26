@@ -11,10 +11,10 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 action.card
             ];
-        // case 'EDIT_CARD':
-        //     return [];
-        // case 'REMOVE_CARD':
-        //     return [];
+        case 'EDIT_CARD':
+            return state.map((card) => card.id === action.card.id ? action.card : card);
+        case 'REMOVE_CARD':
+            return state.filter((card) => card.id !== action.id);
         default:
             return state;
     }
