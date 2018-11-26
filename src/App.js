@@ -4,16 +4,18 @@ export default class App extends Component {
   render() {
     return (
         <div>
-          <h1>Welcome to Colvin React Coding Challenge</h1>
+          <h1>The biggest blackest box</h1>
           <div>
-              <div><button>new card</button></div> <div>Get cards from api</div> <div>create json / pdf / other</div>
+              <div>
+                  <button>new card</button></div>
+                  <div>Get cards from api</div>
+                  <div>create json / pdf / other</div>
+              </div>
             <div>
-                black deck list
+              <div><button>click to black deck list</button></div>
+              <div><button>click white deck list</button></div>
             </div>
-            <div>
-                white deck list
-            </div>
-          </div>
+          <div>list of cards</div>
         </div>
     );
   }
