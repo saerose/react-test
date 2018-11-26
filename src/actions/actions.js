@@ -1,4 +1,4 @@
-import { ADD_CARD, EDIT_CARD, REMOVE_CARD } from 'action_type';
+import { ADD_CARD, EDIT_CARD, REMOVE_CARD } from 'src/actions/types';
 
 export const addCard = (card) => ({
     type: ADD_CARD,
@@ -14,4 +14,5 @@ export const editCard = (card) => ({
 
 export const deleteCard = (card) => ({
     type: REMOVE_CARD,
+    card
 });
