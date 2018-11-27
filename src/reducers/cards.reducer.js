@@ -1,4 +1,4 @@
-import { ADD_CARD, EDIT_CARD, REMOVE_CARD } from "../actions/types";
+import { ADD_CARD, EDIT_CARD, REMOVE_CARD } from "../actions/types.actions";
 
 const initialState = {
     cards: []
