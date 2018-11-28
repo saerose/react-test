@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import Header from "./Header/Header";
 
 
 export default class Dashboard extends Component {
     render() {
         return (
             <div>
-                <h1>The biggest blackest box</h1>
+                <Header />
                 <div>
                     <div>
                         <button>new card</button>
