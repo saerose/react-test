@@ -24,7 +24,4 @@ const Button = styled.div`
     min-width: 100px;
 `;
 
-export {
-    ActionWrapper,
-    Button,
-}
+export { ActionWrapper, Button }
