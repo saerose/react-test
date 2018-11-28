@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./Header/Header";
-import CardActions from "./CardActions/CardActions";
+import CardActions from "./CardActionsButtons/CardActions";
+import CardDeckButtons from "./CardDeckButtons/CardDeckButtons";
 
 
 export default class Dashboard extends Component {
@@ -9,14 +10,7 @@ export default class Dashboard extends Component {
             <div>
                 <Header />
                 <CardActions />
-                <div>
-                    <div>
-                        <button>click to black deck list</button>
-                    </div>
-                    <div>
-                        <button>click white deck list</button>
-                    </div>
-                </div>
+                <CardDeckButtons/>
                 <div>list of cards</div>
             </div>
         )
