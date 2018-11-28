@@ -19,9 +19,9 @@ const Button = styled.div`
     white-space: nowrap;
     box-shadow: inset 0 -4px 0 0 #232323;
     border-radius: 7px;
-    font-size: 18px;
+    font-size: 14px;
     padding: 14px 20px 18px;
-    min-width: 150px;
+    min-width: 100px;
 `;
 
 export {
