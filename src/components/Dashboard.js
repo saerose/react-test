@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Header from "./Header/Header";
+import CardActions from "./CardActions/CardActions";
 
 
 export default class Dashboard extends Component {
@@ -7,13 +8,7 @@ export default class Dashboard extends Component {
         return (
             <div>
                 <Header />
-                <div>
-                    <div>
-                        <button>new card</button>
-                    </div>
-                    <div>Get cards from api</div>
-                    <div>create json / pdf / other</div>
-                </div>
+                <CardActions />
                 <div>
                     <div>
                         <button>click to black deck list</button>
