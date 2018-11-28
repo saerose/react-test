@@ -1,14 +1,16 @@
 import React, { Component } from "react";
+import { ActionWrapper, Button} from "./styles";
 
 
 export default class CardActions extends Component {
     render() {
         return (
-                <div>
-                    <button>new card</button>
-                    <div>Get cards from api</div>
-                    <div>create json / pdf / other</div>
-                </div>
+                <ActionWrapper>
+                    <Button>New card ✨</Button>
+                    <Button>Get cards from API 🤖</Button>
+                    <Button>Create JSON 🙉</Button>
+                    <Button>Create PDF 🙈</Button>
+                </ActionWrapper>
         )
     }
 };
