@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import { Title } from "./styles";
+import { NavBar, Title } from "./styles";
 
 
 export default class Header extends Component {
     render() {
         return (
-            <div>
+            <NavBar>
                 <Title>The biggest blackest box</Title>
-            </div>
+            </NavBar>
         )
     }
 };
