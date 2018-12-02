@@ -7,6 +7,7 @@ const ActionWrapper = styled.div`
 `;
 
 const BigButton = styled.div`
+    cursor: pointer;
     margin: 10px;
     position: relative;
     display: inline-block;
