@@ -7,7 +7,6 @@ export default class CardActions extends Component {
         return (
                 <ActionWrapper>
                     <Button>New card ✨</Button>
-                    <Button>Get cards from API 🤖</Button>
                     <Button>Create JSON 🙉</Button>
                     <Button>Create PDF 🙈</Button>
                 </ActionWrapper>
