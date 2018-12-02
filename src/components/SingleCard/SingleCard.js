@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Card } from './styles';
+import connect from "react-redux/es/connect/connect";
+import {editCard} from "../../store/actions/cards.actions";
 
-export default class SingleCard extends Component {
+class SingleCard extends Component {
 
   render() {
     return (
@@ -11,3 +13,10 @@ export default class SingleCard extends Component {
     )
   }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  editCard: () => dispatch(editCard),
+});
+
+export default connect(null, mapDispatchToProps)(SingleCard);
+

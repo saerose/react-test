@@ -15,13 +15,5 @@ const Card = styled.div`
   border-radius: 7px;
   padding: 5px;
   font-weight: 600;
-  // outline: none;
-  // border: 2px solid #A9B2C3;
-  // white-space: nowrap;
-  // box-shadow: inset 0 -4px 0 0 #A9B2C3;
-  // border-radius: 7px;
-  // font-size: 14px;
-  // padding: 14px 20px 18px;
-  // min-width: 100px;
 `;
 export { Card }
