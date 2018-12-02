@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import connect from 'react-redux/es/connect/connect';
+import SingleCard from '../SingleCard/SingleCard';
 
 class CardList extends Component {
   // componentWillReceiveProps(nextProps, nextContext) {
@@ -18,9 +19,7 @@ class CardList extends Component {
           Loadiiiiiiiiiiing!
         </div>
       : (
-          <div>
-            {this.props.cards.map(el => typeof el === "object" ? el.text : el)}
-          </div>
+          this.props.cards.map((el, i) => typeof el === "object" ? <SingleCard key={i} text={el.text} color='black'/> : <SingleCard key={i} text={el} color='white'/>)
       )
   }
 }
