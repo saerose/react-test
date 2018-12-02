@@ -29,7 +29,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         fetching: false,
-        cards: action.cards
+        cards: action.cards.slice(0, 20)
       };
     case 'ADD_CARD':
       return {
