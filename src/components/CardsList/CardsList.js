@@ -1,17 +1,9 @@
 import React, { Component } from 'react';
 import connect from 'react-redux/es/connect/connect';
 import SingleCard from '../SingleCard/SingleCard';
+import { List } from './styles'
 
 class CardList extends Component {
-  // componentWillReceiveProps(nextProps, nextContext) {
-  //   console.log('next', nextProps)
-  // }
-
-  // componentDidMount() {
-    // this.props.getBlackCards();
-    // this.props.getWhiteCards();
-  // }
-
   render() {
 
     return this.props.loading
@@ -19,7 +11,13 @@ class CardList extends Component {
           Loadiiiiiiiiiiing!
         </div>
       : (
-          this.props.cards.map((el, i) => typeof el === "object" ? <SingleCard key={i} text={el.text} color='black'/> : <SingleCard key={i} text={el} color='white'/>)
+        <List>
+          {this.props.cards.map((el, i) => typeof el === "object"
+          ?
+            <SingleCard key={i} text={el.text} color='black'/>
+          :
+            <SingleCard key={i} text={el} color='white'/>)}
+        </List>
       )
   }
 }
