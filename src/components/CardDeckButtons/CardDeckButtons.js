@@ -5,14 +5,14 @@ import connect from "react-redux/es/connect/connect";
 
 
 class CardDeckButtons extends Component {
-    render() {
-        return (
-            <ActionWrapper>
-                <BigButton onClick={this.props.getBlackCards}>Black Deck 👩🏿</BigButton>
-                <BigButton onClick={this.props.getWhiteCards}>White Deck 👩🏼</BigButton>
-            </ActionWrapper>
-        )
-    }
+  render() {
+    return (
+      <ActionWrapper>
+          <BigButton onClick={this.props.getBlackCards}>Black Deck 👩🏿</BigButton>
+          <BigButton onClick={this.props.getWhiteCards}>White Deck 👩🏼</BigButton>
+      </ActionWrapper>
+    )
+  }
 }
 
 
