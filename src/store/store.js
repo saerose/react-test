@@ -10,7 +10,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const configureStore = () => {
     const reducers = combineReducers({ apiReducer: reducer });
     const store = createStore( reducers, composeEnhancers(applyMiddleware(api(config.baseUrl))));
-    return { store };
+    return store;
 };
 
 export default configureStore;
