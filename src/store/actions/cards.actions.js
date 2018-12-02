@@ -1,13 +1,13 @@
-import { ADD_CARD, EDIT_CARD, REMOVE_CARD, GET_WHITE_CARDS, GET_BLACK_CARDS } from 'types.actions';
+import { ADD_CARD, EDIT_CARD, REMOVE_CARD, GET_WHITE_CARDS, GET_BLACK_CARDS } from './types.actions';
 
 export const getWhiteCards = {
     type: GET_WHITE_CARDS,
-    url: ('?color=white')
+    url: '?color=white'
 };
 
 export const getBlackCards = {
     type: GET_BLACK_CARDS,
-    url: ('?color=black')
+    url: '?color=black'
 };
 
 export const addCard = (card) => ({
