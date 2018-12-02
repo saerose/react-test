@@ -29,10 +29,7 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         fetching: false,
-        cards: [
-          ...state.cards,
-          ...action.cards
-        ]
+        cards: action.cards
       };
     case 'ADD_CARD':
       return {
