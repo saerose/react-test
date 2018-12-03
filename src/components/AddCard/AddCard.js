@@ -1,19 +1,29 @@
 import React, { Component } from "react";
-import { PopUpWrapper, PopUpBox, ClosePop, Input, Title, ColorWrapper, Color } from './styles';
+import {
+  PopUpWrapper,
+  PopUpBox,
+  ClosePop,
+  Input,
+  Title,
+  ColorWrapper,
+  White,
+  Black,
+  AddButton
+} from './styles';
 
 export default class AddCard extends Component {
   render() {
     return (
       <PopUpWrapper>
         <PopUpBox>
-          <ClosePop onClick={this.props.close}>X</ClosePop>
+          <ClosePop onClick={ this.props.close}>X</ClosePop>
           <Title>Add a new card! ✨</Title>
           <Input type='text' placeholder='Card text' required/>
-          <ColorWrapper>
-            <Color>B</Color>
-            <Color>W</Color>
+          <ColorWrapper> whichColor ?
+            <Black></Black> :
+            <White></White>
           </ColorWrapper>
-          <div>ADD</div>
+          <AddButton>ADD</AddButton>
         </PopUpBox>
       </PopUpWrapper>
     )

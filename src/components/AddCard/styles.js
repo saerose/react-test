@@ -5,9 +5,9 @@ const PopUpWrapper = styled.div`
     z-index: 1;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
+    width: 100vw;
+    height: 100vh;
+    overflow: none;
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 `;
@@ -17,11 +17,13 @@ const PopUpBox = styled.div`
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
+  border-radius: 20px;
   width: 50%;
-  height: 50%;
+  height: 55%;
 `;
 
 const ClosePop = styled.div`
+  cursor: pointer;
   color: #aaa;
   float: right;
   font-size: 28px;
@@ -31,7 +33,7 @@ const ClosePop = styled.div`
 const Input = styled.input`
   padding: 0.5em;
   margin: 0.5em;
-  width: 500px;
+  width: 90%;
   height: 100px;
   border: 2px solid #232323;
   background-color: white;
@@ -50,15 +52,52 @@ const Title = styled.h1`
 const ColorWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  font-weight: 600;
 `;
 
 
-const Color = styled.div`
+const White = styled.div`
+  cursor: pointer;
   margin: 10px;
-  background-color: lavender;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
   width: 50px;
   height: 50px;
   border-radius: 50%;
 `;
 
-export { PopUpWrapper, PopUpBox, ClosePop, Input, Title, ColorWrapper, Color }
+const Black = styled.div`
+  cursor: pointer;
+  margin: 10px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+`;
+
+const AddButton = styled.button`
+  cursor: pointer;
+  margin-top: 20px;
+  width: 10em;
+  height: 4em;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 30px;
+  float: right;
+`;
+
+export {
+  PopUpWrapper,
+  PopUpBox,
+  ClosePop,
+  Input,
+  Title,
+  ColorWrapper,
+  White,
+  Black,
+  AddButton
+}
