@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import {addCard} from '../../store/actions/cards.actions';
+import connect from 'react-redux/es/connect/connect';
 import {
   PopUpWrapper,
   PopUpBox,
@@ -11,7 +13,7 @@ import {
   AddButton
 } from './styles';
 
-export default class AddCard extends Component {
+class AddCard extends Component {
   render() {
     return (
       <PopUpWrapper>
@@ -23,10 +25,16 @@ export default class AddCard extends Component {
             <Black></Black> :
             <White></White>
           </ColorWrapper>
-          <AddButton>ADD</AddButton>
+          <AddButton onClick={this.props.addCard}>ADD</AddButton>
         </PopUpBox>
       </PopUpWrapper>
     )
   }
 };
+
+const mapDispatchToProps = (dispatch) => ({
+  addCard: () => dispatch(addCard),
+});
+
+export default connect(null, mapDispatchToProps)(AddCard);
 
