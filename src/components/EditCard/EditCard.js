@@ -13,14 +13,20 @@ import {
   AddButton
 } from './styles';
 
-class AddCard extends Component {
+class EditCard extends Component {
+
+  componentDidMount() {
+    console.log('ello?');
+    console.log('cards props', this.props.text) // Pass card text to placeholder.
+  }
+
   render() {
     return (
       <PopUpWrapper>
         <PopUpBox>
           <ClosePop onClick={ this.props.close}>X</ClosePop>
           <Title>Edit the card! ✏️</Title>
-          <Input type='text' placeholder='Card text' required/>
+          <Input type='text' placeholder={this.props.text} required/> // This is wrong, need to change it later
           <ColorWrapper> whichColor ?
             <Black></Black> :
             <White></White>
@@ -30,10 +36,10 @@ class AddCard extends Component {
       </PopUpWrapper>
     )
   }
-};
+}
 
 const mapDispatchToProps = (dispatch) => ({
   editCard: () => dispatch(addCard),
 });
 
-export default connect(null, mapDispatchToProps)(AddCard);
+export default connect(null, mapDispatchToProps)(EditCard);
