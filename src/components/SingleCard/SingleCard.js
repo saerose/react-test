@@ -1,22 +1,31 @@
 import React, { Component } from 'react';
 import { Card } from './styles';
-import connect from "react-redux/es/connect/connect";
-import {editCard} from "../../store/actions/cards.actions";
+import EditCard from "../EditCard/EditCard";
 
-class SingleCard extends Component {
+export default class SingleCard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showPopup: false
+    };
+  }
+
+  togglePopup = () => {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  };
 
   render() {
     return (
-      <Card color={this.props.color}>
+      <div>
+      {this.state.showPopup ? <EditCard close={this.togglePopup} /> : ''}
+      <Card color={this.props.color} onClick={this.togglePopup}>
         {this.props.text}
       </Card>
+      </div>
     )
   }
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  editCard: () => dispatch(editCard),
-});
-
-export default connect(null, mapDispatchToProps)(SingleCard);
 

@@ -4,6 +4,7 @@ import SingleCard from '../SingleCard/SingleCard';
 import { List } from './styles'
 
 class CardList extends Component {
+
   render() {
 
     return this.props.loading
