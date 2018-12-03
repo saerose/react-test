@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Header from "./Header/Header";
-import CardActions from "./CardActionsButtons/CardActions";
-import CardDeckButtons from "./CardDeckButtons/CardDeckButtons";
-import CardList from "./CardsList/CardsList";
+import Header from "../components/Header/Header";
+import CardActions from "../components/CardActionsButtons/CardActions";
+import CardDeckButtons from "../components/CardDeckButtons/CardDeckButtons";
+import CardList from "../components/CardsList/CardsList";
 
 
 export default class Dashboard extends Component {
