@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import EditCard from "../EditCard/EditCard";
 import {deleteCard} from "../../store/actions/cards.actions";
 import connect from "react-redux/es/connect/connect";
-import { Card, DeleteWrapper } from './styles';
+import { Card, DeleteWrapper, DeleteIcon } from './styles';
 
 
 class SingleCard extends Component {
@@ -34,20 +34,19 @@ class SingleCard extends Component {
 
   render() {
     return (
-      <div>
+      <div onMouseEnter={this.mouseEnter}
+           onMouseLeave={this.mouseOut}>
         {this.state.showPopup ? <EditCard close={this.togglePopup} /> : ''}
+        {this.state.isMouseInside
+          ?
+          <DeleteWrapper>
+            <DeleteIcon onClick={this.deleteCard}>✖</DeleteIcon>︎
+          </DeleteWrapper>
+          :
+          null}
         <Card
-          onMouseEnter={this.mouseEnter}
-          onMouseLeave={this.mouseOut}
           color={this.props.color}
           onClick={this.togglePopup}>
-            {this.state.isMouseInside
-            ?
-            <DeleteWrapper>
-              <div>✖</div>︎
-            </DeleteWrapper>
-            :
-            null}
           {this.props.text}
         </Card>
       </div>
