@@ -16,4 +16,13 @@ const Card = styled.div`
   padding: 5px;
   font-weight: 600;
 `;
-export { Card }
+
+const DeleteWrapper = styled.div`
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  border-radius: 7px;
+  background-color: teal;
+`;
+
+export { Card, DeleteWrapper }

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import { Card } from './styles';
 import EditCard from "../EditCard/EditCard";
-import {addCard} from "../../store/actions/cards.actions";
+import {deleteCard} from "../../store/actions/cards.actions";
 import connect from "react-redux/es/connect/connect";
+import { Card, DeleteWrapper } from './styles';
 
-export default class SingleCard extends Component {
+
+class SingleCard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -40,7 +41,13 @@ export default class SingleCard extends Component {
           onMouseLeave={this.mouseOut}
           color={this.props.color}
           onClick={this.togglePopup}>
-          {this.state.isMouseInside ? <div>✖︎</div> : null}
+            {this.state.isMouseInside
+            ?
+            <DeleteWrapper>
+              <div>✖</div>︎
+            </DeleteWrapper>
+            :
+            null}
           {this.props.text}
         </Card>
       </div>
@@ -52,4 +59,4 @@ const mapDispatchToProps = (dispatch) => ({
   deleteCard: () => dispatch(deleteCard),
 });
 
-export default connect(null, mapDispatchToProps)(EditCard);
+export default connect(null, mapDispatchToProps)(SingleCard);
