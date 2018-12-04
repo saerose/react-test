@@ -39,7 +39,7 @@ class EditCard extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  editCard: () => dispatch(addCard),
+  editCard: () => dispatch(editCard),
 });
 
 export default connect(null, mapDispatchToProps)(EditCard);
