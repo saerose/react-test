@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {addCard} from '../../store/actions/cards.actions';
+import {editCard} from '../../store/actions/cards.actions';
 import connect from 'react-redux/es/connect/connect';
 import {
   PopUpWrapper,
