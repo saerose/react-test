@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {addCard, filterBy, editCard} from '../../store/actions/cards.actions';
-import connect from 'react-redux/es/connect/connect';
+import { connect } from 'react-redux'
 import {
   PopUpWrapper,
   PopUpBox,
@@ -49,7 +49,12 @@ class PopUp extends Component {
         <PopUpBox>
           <ClosePop onClick={this.props.close}>X</ClosePop>
           <Title>{this.props.title}</Title>
-          <Input color={this.state.color} value={this.state.text} onChange={this.handleText} type='text' placeholder='Card text' required/>
+          <Input color={this.state.color}
+                 value={this.state.text}
+                 onChange={this.handleText}
+                 type='text'
+                 placeholder='Card text'
+                 required/>
           <ColorWrapper> whichColor ?
             <Black onClick={() => this.toggleColor('black')} >
               { this.state.color === 'black' ? '✔︎️' : null }

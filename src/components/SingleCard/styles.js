@@ -6,6 +6,7 @@ const opposite = {
 };
 
 const Card = styled.div`
+  cursor: pointer;
   width: 150px;
   height: 200px;
   background-color: ${props => props.color};
