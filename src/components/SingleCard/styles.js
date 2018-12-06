@@ -19,19 +19,18 @@ const Card = styled.div`
 `;
 
 const DeleteWrapper = styled.div`
-    margin: 10px;
-    position: absolute;
-    width: 163px;
-    height: 213px;
-    border-radius: 7px;
-    background-color: teal;
+  margin: 10px;
+  position: absolute;
+  width: 160px;
+  height: 30px;
 `;
 
 const DeleteIcon = styled.span`
   cursor: pointer;
+  margin-right: 10px;
   float: right;
-  margin: 10px;
-  color: #FFFFFF;
+  color: #FF6347;
+  font-size: 30px;
 `;
 
 export { Card, DeleteWrapper, DeleteIcon }
