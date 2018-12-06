@@ -52,12 +52,14 @@ class SingleCard extends Component {
                    title='Edit a card! ✏️'
                    color={this.props.color}
                    text={this.props.text}
-                   id={this.props.id} />
+                   id={this.props.id}
+          />
           :
           ''}
         <Card
           color={this.props.color}
-          onClick={this.togglePopup}>
+          onClick={this.togglePopup}
+          id='single__card__item'>
           {this.props.text}
         </Card>
       </div>
