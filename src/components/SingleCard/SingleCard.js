@@ -6,10 +6,13 @@ import { Card, DeleteWrapper, DeleteIcon } from './styles';
 
 
 class SingleCard extends Component {
-  state = {
+  constructor(props) {
+    super(props)
+    this.state = {
       showPopup: false,
       isMouseInside: false
     };
+  }
 
   togglePopup = () => {
     this.setState({
@@ -31,11 +34,13 @@ class SingleCard extends Component {
 
   render() {
     return (
-      <div id='single__card' onMouseEnter={this.mouseEnter}
+      <div id='single__card'
+           onMouseEnter={this.mouseEnter}
            onMouseLeave={this.mouseOut}>
         {this.state.isMouseInside
         ?
-        <DeleteWrapper onClick={() => this.props.deleteCard({ id: this.props.id, color: this.props.color })}>
+        <DeleteWrapper id='single__card__delete'
+                       onClick={() => this.props.deleteCard({ id: this.props.id, color: this.props.color })}>
           <DeleteIcon>✖</DeleteIcon>︎
         </DeleteWrapper>
         :
