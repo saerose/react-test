@@ -9,10 +9,10 @@ export default class Dashboard extends Component {
     render() {
         return (
             <div>
-                <Header />
-                <CardActions />
-                <CardDeckButtons />
-                <CardList />
+              <Header />
+              <CardDeckButtons />
+              <CardActions />
+              <CardList />
             </div>
         )
     }
