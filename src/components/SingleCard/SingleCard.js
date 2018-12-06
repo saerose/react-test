@@ -1,18 +1,15 @@
 import React, { Component } from 'react';
-import EditCard from "../EditCard/EditCard";
+import AddCard from "../PopUp/PopUp";
 import {deleteCard} from "../../store/actions/cards.actions";
-import connect from "react-redux/es/connect/connect";
+import { connect } from 'react-redux'
 import { Card, DeleteWrapper, DeleteIcon } from './styles';
 
 
 class SingleCard extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+  state = {
       showPopup: false,
       isMouseInside: false
     };
-  }
 
   togglePopup = () => {
     this.setState({
@@ -36,14 +33,23 @@ class SingleCard extends Component {
     return (
       <div onMouseEnter={this.mouseEnter}
            onMouseLeave={this.mouseOut}>
-        {this.state.showPopup ? <EditCard close={this.togglePopup} /> : ''}
         {this.state.isMouseInside
+        ?
+        <DeleteWrapper onClick={() => this.props.deleteCard({ id: this.props.id, color: this.props.color })}>
+          <DeleteIcon>✖</DeleteIcon>︎
+        </DeleteWrapper>
+        :
+        ''}
+        {this.state.showPopup
           ?
-          <DeleteWrapper>
-            <DeleteIcon onClick={this.deleteCard}>✖</DeleteIcon>︎
-          </DeleteWrapper>
+          <AddCard close={this.togglePopup}
+                   button='EDIT'
+                   title='Edit a card! ✏️'
+                   color={this.props.color}
+                   text={this.props.text}
+                   id={this.props.id} />
           :
-          null}
+          ''}
         <Card
           color={this.props.color}
           onClick={this.togglePopup}>
@@ -55,7 +61,7 @@ class SingleCard extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  deleteCard: () => dispatch(deleteCard),
+  deleteCard: (card) => dispatch(deleteCard(card)),
 });
 
 export default connect(null, mapDispatchToProps)(SingleCard);
