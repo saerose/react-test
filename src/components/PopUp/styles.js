@@ -30,13 +30,19 @@ const ClosePop = styled.div`
   font-weight: 600;
 `;
 
+const opposites = {
+  black: 'white',
+  white: 'black'
+}
+
 const Input = styled.input`
   padding: 0.5em;
   margin: 0.5em;
   width: 90%;
   height: 100px;
   border: 2px solid #232323;
-  background-color: white;
+  color: ${props => opposites[props.color]}
+  background-color: ${props => props.color};
   white-space: nowrap;
   box-shadow: inset 0 -4px 0 0 #232323;
   border-radius: 7px;
@@ -60,6 +66,10 @@ const ColorWrapper = styled.div`
 const White = styled.div`
   cursor: pointer;
   margin: 10px;
+  color: black;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 50px;
   background-color: #FFFFFF;
   border: 1px solid #000000;
   width: 50px;
@@ -69,6 +79,10 @@ const White = styled.div`
 
 const Black = styled.div`
   cursor: pointer;
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 50px;
   margin: 10px;
   background-color: #000000;
   border: 1px solid #000000;
