@@ -65,7 +65,8 @@ const reducer = (state = initialState, action) => {
     case 'REMOVE_CARD':
       return {
         ...state,
-        cards: state.cards.filter((card) => card.id !== action.id)
+        cards: state.cards.filter((card) => card.id !== action.card.id ? true : card.color !== action.card.color),
+        allCards: state.allCards.filter((card) => card.id !== action.card.id ? true : card.color !== action.card.color)
       };
     default:
       return state;
