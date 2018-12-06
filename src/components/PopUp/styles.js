@@ -1,25 +1,29 @@
 import styled from 'styled-components';
 
+const opposites = {
+  black: 'white',
+  white: 'black'
+}
+
 const PopUpWrapper = styled.div`
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: none;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
 `;
 
 const PopUpBox = styled.div`
   background-color: #fefefe;
-  margin: 15% auto;
+  margin: 10% auto;
   padding: 20px;
-  border: 1px solid #888;
   border-radius: 20px;
-  width: 50%;
-  height: 55%;
+  width: 40%;
+  height: 70%;
 `;
 
 const ClosePop = styled.div`
@@ -30,30 +34,24 @@ const ClosePop = styled.div`
   font-weight: 600;
 `;
 
-const opposites = {
-  black: 'white',
-  white: 'black'
-}
-
 const Input = styled.input`
-  padding: 0.5em;
-  margin: 0.5em;
-  width: 90%;
-  height: 100px;
+  padding: 10px;
+  margin: 10px;
+  width: 150px;
+  height: 200px;
   border: 2px solid #232323;
   color: ${props => opposites[props.color]}
   background-color: ${props => props.color};
   white-space: nowrap;
   box-shadow: inset 0 -4px 0 0 #232323;
   border-radius: 7px;
-  font-size: 14px;
   outline: none;
+  font-weight: 600;
 `;
 
 const Title = styled.h1`
   font-weight: 600;
 `;
-
 
 const ColorWrapper = styled.div`
   display: flex;
@@ -61,7 +59,6 @@ const ColorWrapper = styled.div`
   align-items: center;
   font-weight: 600;
 `;
-
 
 const White = styled.div`
   cursor: pointer;
@@ -102,6 +99,9 @@ const AddButton = styled.button`
   font-size: 14px;
   border-radius: 30px;
   float: right;
+    :focus {
+    outline: none;
+  }
 `;
 
 export {

@@ -12,9 +12,8 @@ import {
   Black,
   AddButton
 } from './styles';
-import mapStateToProps from "react-redux/es/connect/mapStateToProps";
 
-class AddCard extends Component {
+class PopUp extends Component {
   state = {
     color: this.props.color || 'white',
     text: this.props.text || ''
@@ -34,14 +33,14 @@ class AddCard extends Component {
     if (!this.props.id) {
       this.props.addCard(this.state)
       // TODO: add sequentility to this
-      this.props.restore()
     } else {
       this.props.editCard({
         id: this.props.id,
         ...this.state
       })
-      this.props.restore()
     }
+    this.props.restore()
+    this.props.close()
   }
 
   render() {
@@ -73,5 +72,5 @@ const mapDispatchToProps = (dispatch) => ({
   editCard: (id) => dispatch(editCard(id))
 });
 
-export default connect(null, mapDispatchToProps)(AddCard);
+export default connect(null, mapDispatchToProps)(PopUp);
 
