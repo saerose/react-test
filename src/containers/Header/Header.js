@@ -6,7 +6,7 @@ export default class Header extends Component {
     render() {
         return (
             <NavBar>
-                <Title>The biggest blackest box</Title>
+                <Title>The biggest blackest box 📦</Title>
             </NavBar>
         )
     }

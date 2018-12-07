@@ -3,7 +3,6 @@ import SingleCard from './SingleCard';
 import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { shallow } from 'enzyme';
-// import { stub } from 'sinon';
 
 import configureStore from '../../store/store'
 
@@ -33,7 +32,6 @@ describe('Single Card', () => {
     component.simulate('mouseenter')
     component.find('#single__card__delete').simulate('click');
     expect(store.getState()).not.toBe(copy)
-    // console.log(component.html())
   });
   it('Pop up should display when button is clicked', () => {
     const component = shallow(<SingleCard store={store}/>).dive({ store })
@@ -41,4 +39,4 @@ describe('Single Card', () => {
     component.find('#single__card__item').simulate('click')
     expect(component.state('showPopup')).toBe(true)
   });
-})
+ })

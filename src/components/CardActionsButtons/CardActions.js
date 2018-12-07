@@ -21,8 +21,6 @@ export default class CardActions extends Component {
       <ActionWrapper>
           { this.state.showPopup ? <AddCard close={this.togglePopup} title='Add a new card! ✨'/> : '' }
           <Button onClick={this.togglePopup}>New card ✨</Button>
-          <Button>Create JSON 🙉</Button>
-          <Button>Create PDF 🙈</Button>
       </ActionWrapper>
     )
   }

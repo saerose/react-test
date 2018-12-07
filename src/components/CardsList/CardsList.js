@@ -9,7 +9,7 @@ class CardList extends Component {
 
     return this.props.loading
       ? <Loading>
-          Loadiiiiiiiiiiing!
+          Mechahitler loading...
         </Loading>
       : (
         <List>
